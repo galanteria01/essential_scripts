@@ -2,7 +2,7 @@ KERNEL_DIR=$PWD
 KERNEL="Image.gz-dtb"
 KERN_IMG=$KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb
 BUILD_START=$(date +"%s")
-ANYKERNEL_DIR=/root/AnyKernel2
+ANYKERNEL_DIR=/root/AnyKernel3
 EXPORT_DIR=/root/flashablezips
 
 # Make Changes to this before release
