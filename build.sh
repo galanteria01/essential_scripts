@@ -52,7 +52,7 @@ echo -e "$Yellow***********************************************"
 echo "          Initialising DEFCONFIG        "
 echo -e "***********************************************$nocol"
 
-make O=out ARCH=arm64 whyred-perf_defconfig
+make O=out ARCH=arm64 violet-perf_defconfig
 
 echo -e "$Yellow***********************************************"
 echo "          Cooking BlackBox        "
