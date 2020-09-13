@@ -6,7 +6,7 @@ ANYKERNEL_DIR=/root/AnyKernel3
 EXPORT_DIR=/root/flashablezips
 
 # Make Changes to this before release
-ZIP_NAME="KERNEL_NAME"
+ZIP_NAME="Noodle-perf"
 
 # Color Code Script
 Black='\e[0;30m'        # Black
@@ -23,7 +23,7 @@ nocol='\033[0m'         # Default
 export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER="galanteria01"
-export KBUILD_BUILD_HOST="PhantomBlack"
+export KBUILD_BUILD_HOST="Host"
 export CROSS_COMPILE="/root/aarch64-linux-android-4.9/bin/aarch64-linux-android-"
 export KBUILD_COMPILER_STRING=$(/root/platform_prebuilts_clang_host_linux-x86/clang-r328903/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
                                        "
@@ -55,7 +55,7 @@ echo -e "***********************************************$nocol"
 make O=out ARCH=arm64 violet-perf_defconfig
 
 echo -e "$Yellow***********************************************"
-echo "          Cooking BlackBox        "
+echo "          Cooking Noodle        "
 echo -e "***********************************************$nocol"
 
 make -j$(nproc --all) O=out ARCH=arm64 \
