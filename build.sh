@@ -2,11 +2,11 @@ KERNEL_DIR=$PWD
 KERNEL="Image.gz-dtb"
 KERN_IMG=$KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb
 BUILD_START=$(date +"%s")
-ANYKERNEL_DIR=/root/AnyKernel3
-EXPORT_DIR=/root/flashablezips
+ANYKERNEL_DIR=/home/shanu/AnyKernel3
+EXPORT_DIR=/home/shanu/flashablezips
 
 # Make Changes to this before release
-ZIP_NAME="Noodle-perf"
+ZIP_NAME="Noodle-perf+"
 
 # Color Code Script
 Black='\e[0;30m'        # Black
@@ -24,7 +24,7 @@ export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER="galanteria01"
 export KBUILD_BUILD_HOST="Host"
-export CROSS_COMPILE="/root/aarch64-linux-android-4.9/bin/aarch64-linux-android-"
+export CROSS_COMPILE="/home/shanu/proton-clang"
 export KBUILD_COMPILER_STRING=$(/root/platform_prebuilts_clang_host_linux-x86/clang-r328903/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
                                        "
 
@@ -59,7 +59,7 @@ echo "          Cooking Noodle        "
 echo -e "***********************************************$nocol"
 
 make -j$(nproc --all) O=out ARCH=arm64 \
-		      CC="/root/platform_prebuilts_clang_host_linux-x86/clang-r328903/bin/clang" \
+		      CC="/home/shanu/platform_prebuilts_clang_host_linux-x86/clang-r328903/bin/clang" \
                       CLANG_TRIPLE="aarch64-linux-gnu-"
 
 # If the above was successful
